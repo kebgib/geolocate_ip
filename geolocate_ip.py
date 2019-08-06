@@ -13,7 +13,7 @@ def locate():
     :return: none - exhibits print of information
     """
     ip = input("Geolocate IP: ")
-    url = "https://tools.keycdn.com/geo.json?host={ip}"
+    url = f"https://tools.keycdn.com/geo.json?host={ip}"
     response = requests.get(url,
                             timeout=2)
     response_json = json.loads(response.text)
