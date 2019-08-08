@@ -20,7 +20,7 @@ def locate():
     result = (response_json['status'])
     print(f"Result -- {result}")
     for field in response_json['data']['geo']:
-		    print(field + " -- " + str(response_json['data']['geo'][field]))
+		    if str(response_json['data']['geo'][field]) != 'None': print(field.title() + " -- " + str(response_json['data']['geo'][field]))
 
 if __name__ == '__main__':
     while True:
